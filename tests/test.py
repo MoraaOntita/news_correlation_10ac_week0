@@ -16,8 +16,11 @@ def extract_countries(text, nlp=None):
 def extract_domain(url):
     try:
         parsed_uri = urlparse(url)
-        domain = '{uri.netloc}'.format(uri=parsed_uri)
-        return domain
+        if parsed_uri.netloc:
+            domain = '{uri.netloc}'.format(uri=parsed_uri)
+            return domain
+        else:
+            return None
     except:
         return None
 
