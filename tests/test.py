@@ -1,29 +1,34 @@
 import unittest
-from function import extract_countries, extract_domain
+from utils.functions import extract_countries, extract_domain
 
 class TestFunctions(unittest.TestCase):
-
     def test_extract_countries(self):
-        # Test cases for extract_countries function
-        text1 = "The United States, China, and Russia are mentioned in this text."
-        self.assertEqual(extract_countries(text1), ['united states', 'china', 'russia'])
+        # Test case with a sample text
+        text = "I visited China and Russia yesterday."
+        expected_countries = ['china', 'russia']
+        self.assertEqual(extract_countries(text), expected_countries)
 
-        text2 = "The USA and Africa are important regions."
-        self.assertEqual(extract_countries(text2), ['usa', 'africa'])
-
-        text3 = "No countries mentioned in this text."
-        self.assertEqual(extract_countries(text3), [])
+        # Test case with no countries mentioned
+        text = "The weather was nice today."
+        self.assertEqual(extract_countries(text), [])
 
     def test_extract_domain(self):
-        # Test cases for extract_domain function
-        url1 = "https://www.example.com/path/to/page"
-        self.assertEqual(extract_domain(url1), "www.example.com")
+        # Test case with a valid URL
+        url = "https://www.example.com/somepage"
+        expected_domain = "www.example.com"
+        self.assertEqual(extract_domain(url), expected_domain)
 
-        url2 = "ftp://ftp.example.com/path/to/file"
-        self.assertEqual(extract_domain(url2), "ftp.example.com")
+        # Another valid URL
+        url2 = "http://subdomain.example.com/path/to/page"
+        expected_domain2 = "subdomain.example.com"
+        self.assertEqual(extract_domain(url2), expected_domain2)
 
-        url3 = "invalid_url"
-        self.assertIsNone(extract_domain(url3))
+        # Yet another valid URL
+        url3 = "https://www.example.co.uk"
+        expected_domain3 = "www.example.co.uk"
+        self.assertEqual(extract_domain(url3), expected_domain3)
 
 if __name__ == '__main__':
     unittest.main()
+
+

@@ -1,6 +1,11 @@
+# Import necessary libraries if any
+import spacy
 from urllib.parse import urlparse
 
+# Load spacy model
+nlp = spacy.load("en_core_web_sm")
 
+# List of countries, regions, and continents
 countries_list = [
     'us', 'usa', 'united states', 'united states of america', 'america', 'united states of',
     'china', 'prc', 'people\'s republic of china',
@@ -13,8 +18,9 @@ countries_list = [
 ]
 
 def extract_countries(text):
-    # Implementation of extract_countries function
-    pass
+    doc = nlp(text)
+    countries = [ent.text.lower() for ent in doc.ents if ent.label_ == "GPE" and ent.text.lower() in countries_list]
+    return countries
 
 def extract_domain(url):
     try:
@@ -25,4 +31,3 @@ def extract_domain(url):
         return domain
     except:
         return None
-
