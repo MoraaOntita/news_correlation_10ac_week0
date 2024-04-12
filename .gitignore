@@ -2,3 +2,5 @@
 
 # Ignore dataset folder and its contents
 Datasets/
+
+.env
