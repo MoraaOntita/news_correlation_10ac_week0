@@ -1,0 +1,15 @@
+artifact_uri: file:///media/moraa/New%20Volume/Ontita/10Academy/Cohort%20B/Projects/week0/Notebooks/mlruns/0/a54771e75e004094a808d2466acaa2c0/artifacts
+end_time: 1712840226969
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a54771e75e004094a808d2466acaa2c0
+run_name: masked-bee-265
+run_uuid: a54771e75e004094a808d2466acaa2c0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712840140983
+status: 3
+tags: []
+user_id: moraa
