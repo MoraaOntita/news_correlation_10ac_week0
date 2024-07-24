@@ -14,7 +14,6 @@ This project focuses on analyzing and correlating sentiment, topics, and reporti
 - [Usage](#usage)
 - [Installation](#installation)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Motivation
 
