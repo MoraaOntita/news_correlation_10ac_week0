@@ -63,7 +63,7 @@ To run the analysis on your local machine, follow these steps:
 1. Clone this repository:
    ```bash
    git clone https://github.com/yourusername/news_correlation_10ac_week0.git
-   cd media-analysis
+   cd news_correlation_10ac_week0
    ```
 2. Install the Dependencies:
     ```bash
